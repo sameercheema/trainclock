@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train Schedules</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container">
+<div class="page-header">
+  <h1>Train Schedules <small>| A Comprehensive Directory of Fake Train Times</small></h1>
+</div>
+
+<div class= "row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+		<table class="table table-hover" id="table">
+			<tr>
+				<th>Train Name</th>
+				<th>Destination</th>
+				<th>Frequency (Minutes)</th>
+				<th>Next Arrival</th>
+				<th>Minutes Away</th>
+          <th>Remove</th>
+
+			</tr>
+		</table>
+		</div>
+	</div>
+</div>
+
+	<div class= "row">
+        <div class="col-lg-12">
+           <div class="panel panel-default">
+           <div class="panel-heading">
+                <h3 class="panel-title">
+                    Add Train
+                </h3>
+            </div>
+            <div class="panel-body">
+           <form id="my-form">
+             <div class="form-group">
+               <label for="name">Train Name</label>
+               <input class="form-control" id="name" type="text" placeholder="Choo Choo">
+             </div>
+             <div class="form-group">
+               <label for="role">Destination</label>
+               <input class="form-control" id="destination" type="text" placeholder="Cincinnati">
+             </div>
+               <div class="form-group">
+               <label for="start-date">First Train Time (HH:MM Military Time)</label>
+               <input class="form-control" id="first-train" type="text" placeholder="15:30">
+             </div>
+                <div class="form-group">
+               <label for="frequency">Frequency (in Minutes)</label>
+               <input class="form-control" id="frequency" type="number" placeholder="7">
+             </div>
+             <button class="btn btn-primary" id="submit-train" type="submit">Submit</button>
+           </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div> 
+    <!-- Firebase Reference -->
+<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+    <!-- javascript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="script.js"></script> 
+
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</body>
+</html>
