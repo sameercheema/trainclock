@@ -3,14 +3,14 @@
 
    // Initialize Firebase
    var config = {
-     apiKey: "AIzaSyBvgvGbnsuWEmr9PEBKov3xjyU_0QK3R7A",
-     authDomain: "trainclock-d8120.firebaseapp.com",
-     databaseURL: "https://trainclock-d8120.firebaseio.com",
-     projectId: "trainclock-d8120",
-     storageBucket: "trainclock-d8120.appspot.com",
-     messagingSenderId: "16779548839"
-   };
-   firebase.initializeApp(config);
+    apiKey: "AIzaSyD_n56NXE5NLtjomdfxSjEww_yO0VAgshQ",
+    authDomain: "sameer-s-trains.firebaseapp.com",
+    databaseURL: "https://sameer-s-trains.firebaseio.com",
+    projectId: "sameer-s-trains",
+    storageBucket: "sameer-s-trains.appspot.com",
+    messagingSenderId: "396422728079"
+  };
+  firebase.initializeApp(config);
 
 
   
@@ -25,7 +25,7 @@ $("#add-train-btn").on("click", function(event) {
   var trainName = $("#train-name-input").val().trim();
   var destination = $("#destination-input").val().trim();
   var firstTrain = moment($("#first-input").val().trim(), "hh:mm").format("X");
-  var frequency = $("#frequency-input").val().trim();
+  var frequency = parseInt($("#frequency-input").val().trim());
 
   // creates the local "temporary" object for holding train data
   var newTrain = {
@@ -63,7 +63,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   var trainName = childSnapshot.val().name;
   var destination = childSnapshot.val().destination;
   var firstTrain = childSnapshot.val().firstTrain;
-  var frequency = childSnapshot.val().frequency;
+  var frequency = parseInt(childSnapshot.val().frequency);
 
   // console log the train info
   console.log(trainName);
